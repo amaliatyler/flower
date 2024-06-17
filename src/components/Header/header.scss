@@ -1,0 +1,31 @@
+.header {
+  padding-block: 30px;
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    position: relative;
+
+    font-family: $fontFamilyCormorant;
+    font-size: 50px;
+
+    &_front {
+      font-family: inherit;
+      color: $white;
+      z-index: 3;
+    }
+    &_back {
+      position: absolute;
+      left: -50%;
+      top: -30%;
+      z-index: 2;
+
+      font-size: 60px;
+      font-family: inherit;
+      color: #8a8686;
+    }
+  }
+}

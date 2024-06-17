@@ -1,0 +1,11 @@
+/* Common styles */
+@import './common.scss';
+
+/* ui */
+@import './../components/ui/PrimaryButton/primaryButton.scss';
+@import './../components/ui/SecondaryButton/secondaryButton.scss';
+
+/* компоненты */
+
+@import './../components/Header/header.scss';
+@import './../components/Nav/nav.scss';

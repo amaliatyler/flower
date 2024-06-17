@@ -1,0 +1,60 @@
+/* сброс стилей браузера */
+@import './reset.scss';
+/* шрифты */
+@import './fonts.scss';
+
+/* миксины */
+@import './mixins.scss';
+
+/*  цвета */
+$black: #040a0a;
+$turquoise: #43ffd2;
+$darkPink: #7d2253;
+$lightPink: #d978ac;
+$white: #ffffff;
+
+/* шрифты - ff */
+$fontFamilyOswald: 'Oswald', sans-serif;
+$fontFamilyCormorant: 'Cormorant', serif;
+
+$maxWidth: 1440;
+$maxWidthContainer: 1110;
+$md1: $maxWidthContainer + 12;
+
+.container {
+  max-width: $maxWidthContainer + px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: $fontFamilyOswald;
+}
+
+html,
+body {
+  background-color: $black;
+
+  font-size: 14px;
+  color: $white;
+}
+
+/* ui */
+
+a {
+  color: $white;
+}
+
+/* button */
+
+.btn {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  padding-block: 15px;
+  padding-inline: 50px;
+
+  transition: all 0.3s ease-out;
+}
