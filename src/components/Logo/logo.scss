@@ -1,0 +1,34 @@
+.logo {
+  position: relative;
+  display: inline-block;
+  font-family: $fontFamilyCormorant;
+
+  span {
+    transition: all 0.3s ease-out;
+    font-family: inherit;
+  }
+
+  &-back {
+    position: absolute;
+    z-index: 2;
+    left: -4px;
+    top: -14px;
+
+    font-size: 60px;
+    color: #8a8686;
+  }
+
+  &-front {
+    position: relative;
+    z-index: 2;
+
+    font-size: 50px;
+    color: $white;
+  }
+
+  &:hover {
+    span {
+      color: $turquoise;
+    }
+  }
+}
