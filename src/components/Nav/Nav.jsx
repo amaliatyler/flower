@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from '../Search/Search';
 
 export default function Nav() {
   return (
@@ -23,6 +24,7 @@ export default function Nav() {
           <a href="#">FAQ</a>
         </li>
       </ul>
+      <Search />
     </nav>
   );
 }

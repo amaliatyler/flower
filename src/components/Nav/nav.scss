@@ -1,8 +1,11 @@
 .nav {
+  display: flex;
+  flex: 1 1 auto;
+  gap: 2em;
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
+    gap: 2em;
     justify-content: space-between;
     align-items: center;
 

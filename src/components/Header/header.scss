@@ -3,7 +3,62 @@
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3em;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+  }
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3em;
+    &-phone {
+      font-family: $fontFamilyOswald;
+      color: $turquoise;
+      letter-spacing: $letterSpacing;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5em;
+
+      transition: all 0.3s ease-out;
+      &:hover {
+        color: $lightPink;
+      }
+    }
+    &-cart {
+      font-size: 20px;
+      position: relative;
+
+      transition: all 0.3s ease-out;
+      &-count {
+        position: absolute;
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: $turquoise;
+
+        top: -5px;
+        right: -50%;
+
+        color: $black;
+        text-align: center;
+        line-height: 16px;
+        font-size: 12px;
+      }
+      &:hover {
+        color: $lightPink;
+      }
+    }
   }
 }

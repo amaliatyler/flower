@@ -1,0 +1,40 @@
+.search-form {
+  display: flex;
+  align-items: center;
+  padding-inline: 10px;
+  flex: 1 1 auto;
+
+  &__item {
+    display: none;
+    align-items: center;
+    gap: 0.8em;
+    width: 100%;
+    padding-block: 5px;
+  }
+
+  &__icon {
+    display: block;
+    span {
+      margin-left: 1em;
+      text-transform: uppercase;
+    }
+  }
+  &__close {
+    @include cross(14px, $grey, 1px);
+    display: none;
+  }
+}
+.search-form.active {
+  border-bottom: 1px solid $grey;
+  .search-form__item {
+    display: flex;
+  }
+
+  .search-form__icon {
+    display: none;
+  }
+
+  .search-form__close {
+    display: inline-block;
+  }
+}

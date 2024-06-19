@@ -2,7 +2,8 @@
 @import './reset.scss';
 /* шрифты */
 @import './fonts.scss';
-
+/* иконочный шрифт */
+@import './icons.scss';
 /* миксины */
 @import './mixins.scss';
 
@@ -12,6 +13,7 @@ $turquoise: #43ffd2;
 $darkPink: #7d2253;
 $lightPink: #d978ac;
 $white: #ffffff;
+$grey: #555555;
 
 /* шрифты - ff */
 $fontFamilyOswald: 'Oswald', sans-serif;
@@ -21,6 +23,8 @@ $maxWidth: 1440;
 $maxWidthContainer: 1110;
 $md1: $maxWidthContainer + 12;
 
+$letterSpacing: 0.1em;
+
 .container {
   max-width: $maxWidthContainer + px;
   padding: 0 15px;
@@ -28,6 +32,11 @@ $md1: $maxWidthContainer + 12;
 }
 
 * {
+  font-family: $fontFamilyOswald;
+}
+
+a,
+button {
   font-family: $fontFamilyOswald;
 }
 
@@ -57,4 +66,15 @@ a {
   padding-inline: 50px;
 
   transition: all 0.3s ease-out;
+}
+
+/* for screen readers */
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
