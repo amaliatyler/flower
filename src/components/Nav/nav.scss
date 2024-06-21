@@ -1,7 +1,12 @@
-.nav {
-  display: flex;
-  flex: 1 1 auto;
-  gap: 2em;
+.menu {
+  &__body {
+    display: flex;
+    flex: 1 1 auto;
+    gap: 2em;
+    @media (max-width: $md3+px) {
+      display: none;
+    }
+  }
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -10,13 +15,57 @@
     align-items: center;
 
     letter-spacing: 0.04em;
-    &-item a {
-      position: relative;
+  }
 
-      color: $white;
-      text-transform: uppercase;
-
-      @include hover-underline($turquoise);
+  &__item {
+    position: relative;
+    @media (any-hover: hover) {
+      &:hover {
+        .menu__sub-list {
+          transform: translate(0px, 0px);
+          opacity: 1;
+          visibility: visible;
+          pointer-events: auto;
+        }
+      }
     }
+  }
+
+  &__link {
+    color: $white;
+    text-transform: uppercase;
+
+    @include hover-underline($turquoise);
+  }
+
+  &__sub-list {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    transform: translate(0px, 10px);
+    top: 200%;
+    pointer-events: none;
+
+    text-transform: uppercase;
+
+    min-width: 200px;
+    background-color: $grey;
+    padding-inline: 1.5em;
+    padding-block: 1em;
+
+    transition: all 0.3s ease-out;
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   display: block;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: #ffffff;
+    //   opacity: 20%;
+    //   z-index: -1;
+    // }
   }
 }

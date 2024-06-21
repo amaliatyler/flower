@@ -20,19 +20,41 @@ $fontFamilyOswald: 'Oswald', sans-serif;
 $fontFamilyCormorant: 'Cormorant', serif;
 
 $maxWidth: 1440;
-$maxWidthContainer: 1110;
+$maxWidthContainer: 1120;
 $md1: $maxWidthContainer + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
 
 $letterSpacing: 0.1em;
 
 .container {
   max-width: $maxWidthContainer + px;
-  padding: 0 15px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 
 * {
   font-family: $fontFamilyOswald;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 a,
@@ -77,4 +99,13 @@ a {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden;
+}
+
+.d-block {
+  display: block;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
 }

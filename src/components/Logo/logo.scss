@@ -2,6 +2,9 @@
   position: relative;
   display: inline-block;
   font-family: $fontFamilyCormorant;
+  @media (max-width: $md3+px) {
+    display: none;
+  }
 
   span {
     transition: all 0.3s ease-out;

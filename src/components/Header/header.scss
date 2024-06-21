@@ -8,12 +8,24 @@
     gap: 3em;
   }
 
-  &__main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+  &__logo {
+    &-mobile {
+      display: none;
+      font-family: $fontFamilyCormorant;
+      font-size: 20px;
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 0.2em;
+      span {
+        display: block;
+        font-family: $fontFamilyCormorant;
+      }
+      @media (max-width: $md3+px) {
+        display: inline-block;
+      }
+    }
   }
+
   &__actions {
     display: flex;
     flex-wrap: wrap;
@@ -33,6 +45,9 @@
       transition: all 0.3s ease-out;
       &:hover {
         color: $lightPink;
+      }
+      @media (max-width: $md3+px) {
+        display: none;
       }
     }
     &-cart {
