@@ -52,3 +52,8 @@
     display: block;
   }
 }
+
+@mixin glass-shadow($color: rgba(0, 0, 0, 0.2), $borderRadius: 10px) {
+  background-color: $color;
+  border-radius: $borderRadius;
+}

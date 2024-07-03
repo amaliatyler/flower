@@ -1,0 +1,83 @@
+/* contacts */
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-family: serif;
+
+  &__info {
+    color: $turquoise;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.7em;
+  }
+  &__text {
+    display: block;
+
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  &__social {
+    margin-top: 2em;
+  }
+
+  &__call {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: $turquoise;
+    position: relative;
+    padding-inline: 17px;
+    padding-block: 12px;
+    min-width: 180px;
+    @include glass-shadow(rgba(0, 0, 0, 0.2), 10px);
+  }
+
+  &__tel {
+    letter-spacing: 0.1em;
+    font-weight: normal;
+  }
+
+  &__cart {
+    font-size: 25px;
+    position: relative;
+    @include glass-shadow(rgba(0, 0, 0, 0.2), 10px);
+    padding: 15px;
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(50%, -100%);
+
+      font-size: 12px;
+      display: flex;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      color: $black;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      background-color: $turquoise;
+    }
+  }
+}
+
+/*  social */
+
+.social {
+  display: flex;
+  gap: 1em;
+  &__link {
+    color: $turquoise;
+    font-size: 2em;
+
+    transition: all 0.3s ease-out;
+    &:hover {
+      color: $lightPink;
+    }
+  }
+}

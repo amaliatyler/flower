@@ -13,6 +13,9 @@
   &__list {
     display: flex;
     flex-direction: column;
+    &_titles {
+      gap: 25px;
+    }
   }
 
   &__item {
@@ -37,6 +40,15 @@
     font-weight: 200;
     letter-spacing: 0.04em;
   }
+
+  .contacts__call {
+    display: none;
+  }
+
+  .contacts__cart {
+    display: none;
+    overflow: hidden;
+  }
 }
 
 /* media-queries */
@@ -44,6 +56,13 @@
 @media (max-width: $md4+px) {
   .footer {
     text-align: center;
+  }
+
+  .footer .contacts__social {
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 2em;
   }
 
   .footer__wrapper {
@@ -64,55 +83,7 @@
     font-size: 10px;
   }
 
-  .contacts__social {
-    align-items: center;
-    justify-content: center;
-    margin-top: 0;
-    margin-bottom: 2em;
-  }
-
   .footer__column:first-child {
     order: 5;
-  }
-}
-
-/* contacts */
-
-.contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-
-  &__info {
-    color: $turquoise;
-    text-transform: uppercase;
-    display: block;
-    margin-bottom: 0.7em;
-  }
-  &__text {
-    display: block;
-
-    font-size: 10px;
-    text-transform: uppercase;
-  }
-
-  &__social {
-    margin-top: 2em;
-  }
-}
-
-/*  social */
-
-.social {
-  display: flex;
-  gap: 1em;
-  &__link {
-    color: $turquoise;
-    font-size: 2em;
-
-    transition: all 0.3s ease-out;
-    &:hover {
-      color: $lightPink;
-    }
   }
 }

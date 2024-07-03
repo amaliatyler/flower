@@ -11,5 +11,11 @@
 @import './../components/Logo/logo.scss';
 @import './../components/Header/header.scss';
 @import './../components/Search/search.scss';
+@import './../components/Contacts/contacts.scss';
 @import './../components/Nav/nav.scss';
+@import './../components/SideMenu/sideMenu.scss';
 @import './../components/Footer/footer.scss';
+
+/* страницы */
+
+@import '../pages/Home/home.scss';

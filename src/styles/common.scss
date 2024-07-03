@@ -20,7 +20,7 @@ $fontFamilyOswald: 'Oswald', sans-serif;
 $fontFamilyCormorant: 'Cormorant', serif;
 
 $maxWidth: 1440;
-$maxWidthContainer: 1120;
+$maxWidthContainer: 1150;
 $md1: $maxWidthContainer + 12;
 $md2: 991.98;
 $md3: 767.98;
@@ -51,6 +51,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .main {
@@ -64,10 +65,17 @@ button {
 
 html,
 body {
-  background-color: $black;
-
   font-size: 14px;
   color: $white;
+}
+
+/* fallback for background picture */
+.global-bg {
+  background: #000;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
 }
 
 /* ui */
@@ -108,4 +116,18 @@ a {
 .flex-col {
   display: flex;
   flex-direction: column;
+}
+
+section {
+  padding-block: clamp(50px, 100px, 100px);
+}
+
+.section-title {
+  font-size: 100px;
+  font-weight: normal;
+  font-family: $fontFamilyCormorant;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: normal;
 }

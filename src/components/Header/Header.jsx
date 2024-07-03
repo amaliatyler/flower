@@ -3,6 +3,7 @@ import Nav from '../Nav/Nav';
 import Logo from '../Logo/Logo';
 import Search from '../Search/Search';
 import MobileMenuButton from '../ui/MobileMenuButton/MobileMenuButton';
+import Contacts from '../Contacts/Contacts';
 
 export default function Header() {
   return (
@@ -17,13 +18,7 @@ export default function Header() {
           <Logo />
           <Nav />
           <div className="header__actions">
-            <a href="tel:+375291136969" className="header__actions-phone">
-              <span className="_icon-phone-sm"></span>
-              +375 (29) 113-69-69
-            </a>
-            <button className="header__actions-cart _icon-cart">
-              <span className="header__actions-cart-count">1</span>
-            </button>
+            <Contacts />
           </div>
         </div>
       </div>
