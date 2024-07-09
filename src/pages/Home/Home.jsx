@@ -15,13 +15,13 @@ export default function HomePage() {
 
 function HeroBlock() {
   return (
-    <section className="home__hero hero-block">
+    <section className="hero-block">
       <div className="container">
         <div className="hero-block__bg">
           <div className="hero-block__gradient"></div>
         </div>
-        <div className="hero-block__content">
-          <h1 className="title hero-block__title">Flower Lover</h1>
+        <div className="hero-block__wrapper">
+          <h1 className="hero-block__title title ">Flower Lover</h1>
           <p className="hero-block__text">
             Создаём для тех, кто ценит свежесть и изящество цветка
           </p>
@@ -142,6 +142,7 @@ function CatalogBlock() {
             color="#7D2253"
             blurAmount="120"
             parentClassName="catalog-section"
+            data-order-blur="1"
           />
           <Blur
             width="880px"
@@ -222,10 +223,89 @@ function SpecialOccasion() {
   return (
     <section className="special-occasion">
       <div className="container">
-        <div className="special-occasion__wrapper"></div>
-        <h2 className="section-title special-occasion__section-title">
-          Особенный повод?
-        </h2>
+        <div className="special-occasion__grid">
+          <h2 className="section-title special-occasion__section-title">
+            <span className="special-occasion__section-title_left">
+              Особенный
+            </span>
+            <span
+              className="special-occasion__section-title-line"
+              aria-hidden></span>
+            <span className="special-occasion__section-title_right">
+              повод?
+            </span>
+          </h2>
+
+          <div className="special-occasion__text">
+            <p className="special-occasion__descr">
+              Мы готовы прийти на помощь и собрать уникальный букет, на любой
+              вкус, бюджет и для любого события по вашему индивидуальному
+              заказу.
+            </p>
+            <ul className="special-occasion__list">
+              <li className="special-occasion__list-item">
+                учтем даже самые изысканные пожелания;
+              </li>
+              <li className="special-occasion__list-item">
+                подберем свежайшие цветы и сделаем уникальный букет или
+                композицию;
+              </li>
+              <li className="special-occasion__list-item">
+                оплатить можно при получении или онлайн на сайте
+              </li>
+            </ul>
+          </div>
+          <div className="special-occasion__btn-wrapper">
+            <img
+              src="./home/btn-arrow.svg"
+              alt="CLick the button to create an invidual bouquet"
+              className="special-occasion__btn-arrow"
+            />
+            <PrimaryButton
+              btnText="собрать индивидуальный букет"
+              parentClassName="special-occasion"
+            />
+          </div>
+
+          <div className="special-occasion__img" data-special-img="1">
+            <img
+              src="./home/special-occasion/1.png"
+              alt="Gift wrappings"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="special-occasion__img" data-special-img="2">
+            <img
+              src="./home/special-occasion/2.png"
+              alt="Flowers and fruits"
+              loading="lazy"
+            />
+          </div>
+
+          <div className="special-occasion__img" data-special-img="3">
+            <img
+              src="./home/special-occasion/3.png"
+              alt="Gift Cards"
+              loading="lazy"
+            />
+          </div>
+          <div className="special-occasion__img" data-special-img="4">
+            <img
+              src="./home/special-occasion/4.png"
+              alt="Flower Wreath"
+              loading="lazy"
+            />
+          </div>
+
+          <Blur
+            height="364px"
+            width="354px"
+            color="#7D2253"
+            parentClassName="special-occasion"
+            blurAmount="140"
+          />
+        </div>
       </div>
     </section>
   );

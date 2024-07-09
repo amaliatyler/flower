@@ -6,7 +6,7 @@ export default function Blur({
   height,
   color,
   blurAmount,
-  flag,
+  ...rest
 }) {
   const defaultClassName = 'blur';
   const className = parentClassName
@@ -15,6 +15,7 @@ export default function Blur({
   return (
     <div
       className={className}
+      {...rest}
       style={{
         width,
         height,

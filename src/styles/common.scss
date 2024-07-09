@@ -92,8 +92,12 @@ a {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 50px;
   padding-block: 15px;
-  padding-inline: 50px;
+  min-width: 255px;
 
   transition: all 0.3s ease-out;
 }
@@ -130,4 +134,26 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.02em;
   line-height: normal;
+}
+.section-title > * {
+  font-size: 100px;
+  font-weight: normal;
+  font-family: $fontFamilyCormorant;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: normal;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
