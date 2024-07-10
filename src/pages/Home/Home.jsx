@@ -5,10 +5,11 @@ import Blur from '../../components/Blur/Blur';
 export default function HomePage() {
   return (
     <main className="main">
-      <HeroBlock />
+      {/* <HeroBlock />
       <CatalogBlock />
       <HowToOrder />
-      <SpecialOccasion />
+      <SpecialOccasion /> */}
+      <QuestionsForm />
     </main>
   );
 }
@@ -211,7 +212,7 @@ function HowToOrder() {
         </div>
       </div>
       <img
-        src="./home/order.png"
+        src="./home/order-section/order.png"
         alt="Decor element"
         className="order-section__bg"
       />
@@ -307,6 +308,90 @@ function SpecialOccasion() {
           />
         </div>
       </div>
+    </section>
+  );
+}
+
+function QuestionsForm() {
+  return (
+    <section className="questions-form">
+      <div className="container">
+        <div className="questions-form__grid">
+          <h2 className="questions-form__title section-title">
+            <span>Остались</span>
+            <span>Вопросы?</span>
+          </h2>
+          <span className="questions-form__line"></span>
+          <form action="#" className="questions-form__form">
+            <fieldset>
+              <legend>
+                Отправьте ваш вопрос, заказ, предложение или жалобу через форму
+                обратной связи, и наш специалист свяжется с вами в течение 15
+                минут.
+              </legend>
+              <label className="sr-only" htmlFor="name">
+                Введите ваше имя
+              </label>
+              <input
+                type="text"
+                placeholder="Ваше имя"
+                className="questions-form__input"
+              />
+              <label className="sr-only" htmlFor="name">
+                Введите ваш номер телефона
+              </label>
+              <input
+                type="number"
+                placeholder="+7 (977) 777-77-77"
+                className="questions-form__input"
+              />
+              <label className="sr-only" htmlFor="name">
+                Введите Ваш комментарий
+              </label>
+              <input
+                type="textarea"
+                placeholder="Ваш комментарий"
+                className="questions-form__input"
+              />
+            </fieldset>
+            <div className="questions-form__consent">
+              <p className="questions-form__consent-text">
+                Нажимая на кнопку «Отправить», я даю свое согласие на обработку
+                персональных данных, в соответствии с{' '}
+                <a href="#" className="questions-form__policy">
+                  Политикой конфиденциальности
+                </a>
+              </p>
+              <PrimaryButton type="submit" btnText="Отправить" />
+            </div>
+          </form>
+          <Blur
+            height="427px"
+            width="416px"
+            color="#7D2253"
+            parentClassName="questions-form"
+            blurAmount="120"
+          />
+          <Blur
+            height="285px"
+            width="245px"
+            color="#43FFD2"
+            parentClassName="questions-form"
+            blurAmount="120"
+          />
+          <img
+            className="questions-form__handwriting"
+            src="./home/questions-form/questions-handwriting.svg"
+            alt=""
+          />
+        </div>
+      </div>
+      <img
+        className="questions-form__leafs"
+        src="./home/questions-form/leafs.png"
+        alt=""
+        aria-hidden
+      />
     </section>
   );
 }
